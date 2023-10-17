@@ -35,7 +35,7 @@ int main(void)
 	
 	//Il computer interpreta tutte le variabili come dei numeri, quindi anche le lettere le memorizza come un numero.
 	//Poichè le lettere per il computer sono come dei numeri allora le possiamo anche stampare con il simbolo %d per sapere il loro valore numerico
-    printf("%d", lettera);
+	printf("%d", lettera);
 	//in questo caso la lettera minuscola 'a' è uguale al numero intero "97" 
-    return 0;
+	return 0;
 }
