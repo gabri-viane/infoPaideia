@@ -32,6 +32,7 @@ Si trascina il blocco e lo si "aggancia" a quello precedentemente posizionato.
 Ora se si clicca sulla bandierina verde il gatto si muoverà del numero di passi scritti dentro il blocco azzurro appena posizionato: in questo caso 10.
 
 ![p3](image-6.png)
+
 Come si vede da questa immagine dopo aver premuto 3 volte la bandierina verde la posizione x è arrivata a 30.
 
 ### Strutture di controlo
