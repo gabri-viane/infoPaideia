@@ -1,3 +1,7 @@
+[indietro](/SecondoAnno/Variabili/variabili.md)
+
+---
+
 ## Tipo di una variabile (DATA TYPES)
 In ***C*** c'è però da precisare una cosa:
 ogni volta che si vuole creare una nuova "scatola" (varibile) bisogna dire al computer che cosa conterrà (il tipo).
@@ -56,3 +60,6 @@ Questo tipo può essere rappresentato anche come numero intero (int):
 | ----- | ----------------------------- |
 | true  | qualsiasi numero diverso da 0 |
 | false | 0                             |
+
+---
+[indietro](/SecondoAnno/Variabili/variabili.md)

@@ -1,3 +1,7 @@
+[indietro](/SecondoAnno/Variabili/variabili.md)
+
+---
+
 ## Dichiarazione di Variabili (DECLARATION)
 Prima di poter usare una variabile bisogna dire al computer che esiste. Gli si dice con l'istruzione di **dichiarazione**.
 Dichiarare una variabile vuol dire dargli un posto nella memoria del computer (nella RAM).
@@ -37,3 +41,6 @@ Qua sotto c'è un elenco di esempi che rispettano la regola di dichiarazione det
     bool conDiZioNE_1;
 
 Per vedere come dichiarare una variabile guarda anche [qui](./Lezione2/Variabili/esempio3.c)
+
+---
+[indietro](/SecondoAnno/Variabili/variabili.md)

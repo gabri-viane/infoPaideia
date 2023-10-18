@@ -1,3 +1,7 @@
+[indietro](/SecondoAnno/Variabili/variabili.md)
+
+---
+
 ## Assegnamento di Variabili (ASSIGNMENT)
 
 *SOLO DOPO AVER DICHIARATO* una variabile gli si può assgnare (cioè impostare) un valore.
@@ -122,3 +126,6 @@ oppure
     bool condizione_2 = false;
 
 Che sono gli unici due valore che può avere una variabile di tipo bool.
+
+---
+[indietro](/SecondoAnno/Variabili/variabili.md)

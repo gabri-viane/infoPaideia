@@ -1,3 +1,7 @@
+[indietro](/PrimoAnno/index.md)
+
+---
+
 # Scratch
 Fornisce le basi per iniziare a capire la programmazione: [scratch](https://scratch.mit.edu/projects/editor/) (basta cercare "scratch" su internet).
 Permette di far muovere, parlare (e altre azioni) uno sprite (il gatto arancione) tramite un codice costruibile trascinando le varie istruzioni dal pannello di destra a quello centrale.
@@ -69,3 +73,6 @@ Ripete 10 volte consecutive i passaggi al suo interno, analizzando quindi questo
 | 7         | Fine del programma                                                | contatore = 0              |
 
 Ad ogni fine ciclo viene incrementato il contatore e si ritorna ad eseguire il codice al suo interno fino a che raggiunge la condizione in cui il contatore supera il numero di volte che gli è stato imposto (in questo caso 10). Quando questo succede il ciclo termina e si esce.
+
+---
+[indietro](/PrimoAnno/index.md)
