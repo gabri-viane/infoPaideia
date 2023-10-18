@@ -35,17 +35,37 @@ Ora se si clicca sulla bandierina verde il gatto si muoverà del numero di passi
 
 Come si vede da questa immagine dopo aver premuto 3 volte la bandierina verde la posizione x è arrivata a 30.
 
-### Strutture di controlo
+### Strutture di controllo
 Le strutture di controllo permettono di valutare delle condizioni ed eseguire delle scelte:
-prendiamo da "Controllo" il blocco "se - altrimenti":
-
+#### Strutture decisionali
+prendiamo da "Controllo" il blocco "se - altrimenti":<br/>
 dove c'è scritto "se" si può vedere un rombo vuoto: in questa posizione possiamo inserire la condizione da verificare.
 
 ![p4](./images/image-4.png)
 
 I "buchi" con una certa forma possono essere riempiti solo con un blocco della stessa forma. Quindi nel rombo può essere posizionata solo un'istruzione a forma di rombo.
-
-Proseguiamo il programma controllando questa condizione: 
+<br/>Proseguiamo il programma controllando questa condizione: 
 se la posizione dello sprite è maggiore di 50 ritorna alla posizione x=0 e y=0, altrimenti fai altri 5 passi.
 
 ![p5](./images/image-7.png)
+
+#### Strutture cicliche 
+
+Una struttura ciclica ripete il numero indicato di volte (oppure infinite volte) il codice al suo interno.
+Ad esempio:
+
+![p6](./images/image-8.png)
+
+Ripete 10 volte consecutive i passaggi al suo interno, analizzando quindi questo codice:
+
+| passaggio | Spiegazione                                                       | Contatore ciclo            |
+| --------- | ----------------------------------------------------------------- | -------------------------- |
+| 1         | Premuta la bandierina                                             |                            |
+| 2         | Entro nel ciclo                                                   | contatore = 0              |
+| 3         | Se il contatore è minore di 10 vai al passaggio 4 altrimenti al 7 |                            |
+| 4         | Aspetto 1 secondo                                                 |                            |
+| 5         | Sposta a caso il gatto                                            |                            |
+| 6         | Incrementa il contatore e torna a 3                               | coontatore = contatore + 1 |
+| 7         | Fine del programma                                                | contatore = 0              |
+
+Ad ogni fine ciclo viene incrementato il contatore e si ritorna ad eseguire il codice al suo interno fino a che raggiunge la condizione in cui il contatore supera il numero di volte che gli è stato imposto (in questo caso 10). Quando questo succede il ciclo termina e si esce.
