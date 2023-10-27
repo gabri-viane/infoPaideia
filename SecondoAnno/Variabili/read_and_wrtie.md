@@ -1,0 +1,1 @@
+# Lettura e scrittura delle variabili
