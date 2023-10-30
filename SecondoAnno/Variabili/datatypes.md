@@ -48,13 +48,13 @@ Per vedere quali sono i possibili caratteri [guarda la tabella Ascii](https://ww
 
 ### bool
 
-Il tipo _bool_ chiamato **boolean** ha solo due possibili valori: **true** oppure **false**.
+Il tipo _bool_ chiamato **boolean** ha solo due possibili valori: **true** (1) oppure **false** (0).
 Cioè rappresenta una condizione: o vero o falso ed è utilizzato per eseguire delle scelte.
 
     Se vero allora ...
     Se falso allora ...
 
-Questo tipo può essere rappresentato anche come numero intero (int):
+Questo tipo è rappresentato anche come numero intero (int):
 
 | bool  | valore numerico               |
 | ----- | ----------------------------- |

@@ -93,7 +93,7 @@ vengono chiesti all'utente due valori interi: valore1 e valore2, controllare se:
 
 Stampare quale è il risultato
 
-### Es. 3.2 - Controllo input 
+### Es. 3.2 - Controllo input
 Svolgere l'esercizio [es. 2.2](#es-22---calcolo-sconto) ed aggiungere la seguente parte:<br/>
 Controllare che lo sconto che inserisce l'utente sia un valore compreso tra 0 e 100:
 - se è compreso stampare il risultato

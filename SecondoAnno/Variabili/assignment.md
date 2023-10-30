@@ -119,13 +119,13 @@ Vuol dire ancora 'a'.
 
 ### bool
 
-    bool condizione_1 = true;
+    bool condizione_1 = 1; 
 
-oppure
+Dove 1 vuol dire "true" (vero), oppure:
 
-    bool condizione_2 = false;
+    bool condizione_2 = 0;
 
-Che sono gli unici due valore che può avere una variabile di tipo bool.
+dove 0 vuol dire "false" (falso), che sono gli unici due valori che può avere una variabile di tipo bool.
 
 ---
 [indietro](/SecondoAnno/Variabili/variabili.md)

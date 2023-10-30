@@ -71,7 +71,7 @@ Questa funzione è definita nella libreria **stdio.h** che abbiamo incluso all'i
 
 Quindi, sapendo che il carattere "\n" vuol dire "andare a capo", questa chiamata a funzione stamperà a schermo :
 
-```c
+```
 Hello
  World
 
@@ -82,7 +82,7 @@ Notare la riga vuota e lo spazio prima della parola "World".
     return 0;
 ```
 
-serve per uscire dalla funzione main e ritorna il valore 0 (cioè nessun errore).
+serve per uscire dalla funzione main e ritorna il valore 0 (vuol dire nessun errore).
 
 ---
 [indietro](./index.md)

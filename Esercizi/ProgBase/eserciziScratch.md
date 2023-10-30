@@ -1,12 +1,12 @@
 # Esercizi
 Indice
 - [Esercizi](#esercizi)
-    - [Es. 1.1 - Spostamento base](#es-11---spostamento-base)
+    - [Es 1.1 - Spostamento base](#es-11---spostamento-base)
     - [Es 1.2 - Spostamento con controllo](#es-12---spostamento-con-controllo)
     - [Es 1.3 - Spostamento ciclico](#es-13---spostamento-ciclico)
     - [Es 1.4 - Spostamento con Variabile](#es-14---spostamento-con-variabile)
 
-### Es. 1.1 - Spostamento base
+### Es 1.1 - Spostamento base
 Quando si clicca sulla bandierina cambiare (spostare) X di **+10**. Quando si clicca sullo sprite (sul gattino) impostare (andare) a X = 0.
 
 ### Es 1.2 - Spostamento con controllo
