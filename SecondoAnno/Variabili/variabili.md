@@ -11,6 +11,8 @@ Le varie di tipologie di variabili che esistono in C: [vedi qua](./datatypes.md)
 Regole per come si deve dichiarare una variabile: [vedi qua](./declaration.md)
 ## 3. Assegnamento di una Variabile
 Come si fa a dare un valore ad una variabile: [vedi qua](./assignment.md)
+## 4. Lettura e scrittura da console
+Come si fa a leggere dalla console o scrivere nella console: [vedi qua](./read_and_write.md)
 
 ---
 

@@ -1,3 +1,7 @@
+[indietro](/SecondoAnno/index.md)
+
+---
+
 **Indice**:
 - [Stampare e Leggere nella console](#stampare-e-leggere-nella-console)
   - [Introduzione](#introduzione)
@@ -201,3 +205,7 @@ Quindi la funzione scanf:
 1. Prende la stringa `"%d"`
 2. Legge che il simbolo speciale è `%d` e quindi aspetta che l'utente inserisca un numero intero
 3. Appena l'utente preme invio legge ciò che ha scritto, lo converte in base al simbolo e lo va a salvare all'indirizzo passato (notare che `&eta_Marco` vuol dire *indirizzo della variabile `eta_Marco`*)
+
+---
+
+[indietro](/SecondoAnno/index.md)

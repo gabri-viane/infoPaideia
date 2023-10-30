@@ -128,4 +128,3 @@ Scegli un'opzione:<br/>
 Scelta: 1<br/>
 Il risultato è 15
 <code>
-
