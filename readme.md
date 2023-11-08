@@ -1,7 +1,11 @@
-# Indice
+# Teoria
    1. [Primo anno](/PrimoAnno/index.md)
    2. [Secondo anno](/SecondoAnno/index.md)
    3. [Terzo anno](/TerzoAnno/index.md)
+
+# Esercizi
+   1. [Basi di programmazione](/Esercizi/ProgBase/eserciziScratch.md)
+   2. [Programmazione in C](/Esercizi/ProgrC/eserciziCbase.md)
 
 ## Installare Visual Studio Code
 

@@ -13,6 +13,10 @@ Indice:
     - [Es. 3.1 - Controllo valori](#es-31---controllo-valori)
     - [Es. 3.2 - Controllo input](#es-32---controllo-input)
     - [Es. 3.3 - Scelta operazione](#es-33---scelta-operazione)
+  - [4. CICLI](#4-cicli)
+    - [Es. 4.1 - Moltiplicazione con ciclo](#es-41---moltiplicazione-con-ciclo)
+    - [Es. 4.2 - Somma continuativa](#es-42---somma-continuativa)
+    - [Es. 4.3 - Media voti](#es-43---media-voti)
 
 ## 1. DICHIARAZIONE ED ASSEGNAMENTO
 
@@ -127,4 +131,47 @@ Scegli un'opzione:<br/>
 
 Scelta: 1<br/>
 Il risultato è 15
+</code>
+
+## 4. CICLI 
+
+### Es. 4.1 - Moltiplicazione con ciclo
+
+Scrivere un programma che chieda all'utente di inserire due numeri (interi) da moltiplicare tra loro, ad esempio: 5 e 3.
+Eseguire la moltiplicazione con questi numeri usando solo la somma e il ciclo _for_ e stampare il risultato.
+
+(Suggerimento: <code>3*5 = 3 + 3 + 3 + 3</code> cioè sommare 3 per 5 volte.)
+
+### Es. 4.2 - Somma continuativa
+
+Scrivere un programma che chieda continuamente all'utente un numero e lo sommi al precedente finchè non inserisce il numero 0.
+
+Una volta inserito il numero 0 stampare il risultato della somma. Ad esempio:
+
 <code>
+Inserisci un numero: 5 <br/>
+Inserisci un numero: 8 <br/>
+Inserisci un numero: 2 <br/>
+Inserisci un numero: 9 <br/>
+Inserisci un numero: 1 <br/>
+Inserisci un numero: 0 <br/>
+Totale: 25
+</code>
+
+### Es. 4.3 - Media voti
+
+Scrivere un programma che chieda all'utente quanti voti vuole inserire, dopodichè chiedere i voti e sommarli tra loro. Infine fare la media e stampare il risultato.
+
+(Suggerimento: la media si fa sommando tutti i voti e dividendo per il numero di voti usati)
+
+Ad esempio:
+
+<code>
+Quanti voti vuoi inserire? 5 <br/>
+Inserisci voto (1) : 7 <br/>
+Inserisci voto (2) : 8 <br/>
+Inserisci voto (3) : 6 <br/>
+Inserisci voto (4) : 9 <br/>
+Inserisci voto (5) : 5 <br/>
+Il risultato è : 7.00
+</code>
