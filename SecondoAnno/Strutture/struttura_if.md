@@ -13,4 +13,4 @@ La struttura if serve per controllare una condizione, deve essere scritta come s
 Tutto il codice che c'è dentro le parentesi graffe viene eseguito solo se la condizione è vera.
 
 Di seguito uno schema di come utilizzare if, if-else, else if:
-![Schema](./img/schema_if_else.png)
+![Schema](./img/Schema_if_completo.png)
