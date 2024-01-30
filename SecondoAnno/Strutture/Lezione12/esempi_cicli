@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+    // for(int i=0; i<10; i++)
+    // Composto da 3 parti: (le parti sono divise da punto e virgola)
+    for (          // qui inizia a vivere "i"
+        int i = 0; // 1. Dichiarazione dell'indice del ciclo
+        i < 10;    // 2. Controllo che l'indice i sia minore di un certo valore
+        i++        // 3. Operazione di assegnamento
+    )
+    {
+        // Tutto ciò che c'è tra le graffe viene ripetuto per un numero
+        // di volte che abbiamo deciso
+    } // qua in fondo muore la variabile "i"
+    int i = 0;
+    while (i < 10)//Ciclo while permette solo un controllo
+    {
+        i++;
+    }
+
+}
