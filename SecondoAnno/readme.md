@@ -5,6 +5,8 @@
 ## Secondo anno
 Imparare a programmare in C.
 
+### [Riassunto teoria](../teoria.md)
+
 ### 1. Programmare in C
 1. Variabili e operazioni con le variabili: [qui](./Variabili/variabili.md)
    1. Tipi di variabile [qua](./Variabili/datatypes.md)

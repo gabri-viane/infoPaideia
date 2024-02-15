@@ -1,56 +1,26 @@
-1. Introduzione alla programmazione in C:
-   - Concetti di programmazione
-   - Vantaggi e limitazioni del linguaggio C
-   - Struttura di un programma C
-
-2. Tipi di dati in C:
-   - Introduzione ai tipi di dati primitivi (int, float, char, etc.)
-   - Dichiarazione di variabili
-   - Modificatori di tipo (signed, unsigned, short, long)
-
-3. Operatori e espressioni:
-   - Operatori aritmetici, relazionali e logici
-   - Precedenza degli operatori
-   - Espressioni e valutazione
-
-4. Istruzioni di controllo:
-   - Istruzioni di selezione (if, else if, switch)
-   - Istruzioni di iterazione (for, while, do-while)
-   - Istruzioni di salto (break, continue, return, goto)
-
-5. Funzioni:
-   - Definizione e chiamata di funzioni
-   - Passaggio di parametri per valore e per riferimento
-   - Funzioni ricorsive
-
-6. Array:
-   - Definizione e inizializzazione di array
-   - Accesso agli elementi di un array
-   - Operazioni sugli array (ordinamento, ricerca, etc.)
-
-7. Puntatori:
-   - Concetto di puntatore e indirizzo di memoria
-   - Operazioni sui puntatori (dereferenziazione, aritmetica dei puntatori)
-   - Puntatori e array
-
-8. Strutture di dati:
-   - Definizione e utilizzo delle strutture
-   - Strutture annidate e strutture annidate con puntatori
-   - Array di strutture
-
-9. Allocazione dinamica della memoria:
-   - Utilizzo delle funzioni malloc(), calloc(), realloc() e free()
-   - Gestione della memoria dinamica
-
-10. File I/O:
-    - Operazioni di lettura e scrittura su file
-    - Gestione degli errori di I/O
-    - Operazioni di posizionamento all'interno dei file
-
-11. Pratica della programmazione:
-    - Esercizi e progetti per applicare i concetti appresi
-    - Debugging e correzione degli errori
-    - Stile di programmazione e buone pratiche
+### Indice:
+- [1. Introduzione alla programmazione in C](#1-introduzione-alla-programmazione-in-c)
+    - [Concetti di programmazione](#concetti-di-programmazione)
+    - [Vantaggi e limitazioni del linguaggio C](#vantaggi-e-limitazioni-del-linguaggio-c)
+    - [Struttura di un programma C](#struttura-di-un-programma-c)
+- [2. Tipi di dati in C](#2-tipi-di-dati-in-c)
+    - [Introduzione ai tipi di dati primitivi](#introduzione-ai-tipi-di-dati-primitivi)
+    - [Dichiarazione di variabili](#dichiarazione-di-variabili)
+    - [Modificatori di tipo](#modificatori-di-tipo)
+- [3. Istruzioni di controllo](#3-istruzioni-di-controllo)
+    - [Istruzioni di selezione](#istruzioni-di-selezione)
+    - [Istruzioni di iterazione](#istruzioni-di-iterazione)
+    - [Istruzioni di salto](#istruzioni-di-salto)
+- [4. Funzioni in C](#4-funzioni-in-c)
+    - [Definizione e chiamata di funzioni](#definizione-e-chiamata-di-funzioni)
+    - [Passaggio di parametri](#passaggio-di-parametri)
+    - [Funzioni ricorsive (non visto ancora)](#funzioni-ricorsive-non-visto-ancora)
+    - [Utilità delle funzioni](#utilità-delle-funzioni)
+- [5. Array in C](#5-array-in-c)
+    - [Definizione e inizializzazione di array](#definizione-e-inizializzazione-di-array)
+    - [Accesso agli elementi di un array](#accesso-agli-elementi-di-un-array)
+    - [Operazioni sugli array](#operazioni-sugli-array)
+    - [Considerazioni sugli array](#considerazioni-sugli-array)
 
 # 1. Introduzione alla programmazione in C
 
@@ -286,7 +256,7 @@ I parametri possono essere passati a una funzione in due modi principali: per va
 
 - **Passaggio per riferimento**: I parametri sono passati per riferimento quando si passa l'indirizzo di memoria dei parametri alla funzione. In questo modo, le modifiche apportate ai parametri all'interno della funzione influiscono direttamente sui parametri originali.
 
-### Funzioni ricorsive
+### Funzioni ricorsive (non visto ancora)
 
 Una funzione ricorsiva è una funzione che si richiama direttamente o indirettamente. Una chiamata ricorsiva termina quando una condizione di uscita è soddisfatta. Le funzioni ricorsive possono essere utilizzate per risolvere problemi che possono essere scomposti in problemi più piccoli dello stesso tipo.
 
@@ -294,10 +264,11 @@ Ad esempio, il calcolo del fattoriale di un numero può essere implementato in m
 
 ```c
 int fattoriale(int n) {
-    if (n == 0 || n == 1)
+    if (n == 0 || n == 1){
         return 1;
-    else
+    }else{
         return n * fattoriale(n - 1);
+    }
 }
 ```
 
