@@ -4,7 +4,7 @@
  * @brief Calcola la lunghezza di una stringa (array di caratteri)
  * 
  * @param testo La stringa da misurare
- * @return int La lunghezza della stringa
+ * @return La lunghezza della stringa
  */
 int calcolaLunghezza(char testo[]){
     int lunghezza = 0;//parto dalla posizione 0
