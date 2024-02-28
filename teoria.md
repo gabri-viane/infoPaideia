@@ -22,6 +22,40 @@
     - [Operazioni sugli array](#operazioni-sugli-array)
     - [Considerazioni sugli array](#considerazioni-sugli-array)
 
+3. Operatori e espressioni:
+   - Operatori aritmetici, relazionali e logici
+   - Precedenza degli operatori
+   - Espressioni e valutazione
+
+6. Array:
+   - Definizione e inizializzazione di array
+   - Accesso agli elementi di un array
+   - Operazioni sugli array (ordinamento, ricerca, etc.)
+
+7. Puntatori:
+   - Concetto di puntatore e indirizzo di memoria
+   - Operazioni sui puntatori (dereferenziazione, aritmetica dei puntatori)
+   - Puntatori e array
+
+8. Strutture di dati:
+   - Definizione e utilizzo delle strutture
+   - Strutture annidate e strutture annidate con puntatori
+   - Array di strutture
+
+9. Allocazione dinamica della memoria:
+   - Utilizzo delle funzioni malloc(), calloc(), realloc() e free()
+   - Gestione della memoria dinamica
+
+10. File I/O:
+    - Operazioni di lettura e scrittura su file
+    - Gestione degli errori di I/O
+    - Operazioni di posizionamento all'interno dei file
+
+11. Pratica della programmazione:
+    - Esercizi e progetti per applicare i concetti appresi
+    - Debugging e correzione degli errori
+    - Stile di programmazione e buone pratiche
+
 # 1. Introduzione alla programmazione in C
 
 La programmazione in C è un punto di partenza comune per molte persone che vogliono imparare a programmare. C è un linguaggio di programmazione di medio livello creato da Dennis Ritchie alla Bell Labs negli anni '70. È un linguaggio potente e flessibile che è stato utilizzato per sviluppare molti sistemi operativi, applicazioni desktop, dispositivi embedded e altro ancora. 
