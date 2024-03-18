@@ -1,5 +1,20 @@
 # Labirinto tra le stanze
 
+### Indice:
+
+- [Labirinto tra le stanze](#labirinto-tra-le-stanze)
+    - [Indice:](#indice)
+    - [Spiegazione del gioco:](#spiegazione-del-gioco)
+    - [Come funziona:](#come-funziona)
+    - [Cosa dovete fare?](#cosa-dovete-fare)
+      - [Esempio uso strutture:](#esempio-uso-strutture)
+    - [Programma di base](#programma-di-base)
+    - [Il giocatore](#il-giocatore)
+    - [Funzione della stanza](#funzione-della-stanza)
+    - [Esempio di come funziona il gioco:](#esempio-di-come-funziona-il-gioco)
+  - [Punti aggiuntivi del gruppo](#punti-aggiuntivi-del-gruppo)
+
+
 Creiamo un gioco di avventura testuale: è un tipo di gioco in cui i giocatori interagiscono con il mondo di gioco attraverso il testo, prendendo decisioni e risolvendo enigmi.
 Ecco una spiegazione più dettagliata su come potrebbe funzionare e un esempio di codice in C per creare una semplice avventura testuale:
 
@@ -99,6 +114,12 @@ Il vostro file di base deve essere contenere il codice qua sotto, poi potete cre
 ```c
 #include <stdio.h>
 
+
+typedef struct {
+    int vita;       //vita del giocatore
+    int ID_stanza;  //Stanza in cui si trova
+} Giocatore;
+
 typedef struct {
     int ID_destra;   // Stanza che si trova a destra
     int ID_sinistra; // Stanza che si trova a sinistra
@@ -111,9 +132,10 @@ typedef struct {
     char nome[50];         // Nome della tua stanza
     char descrizione[150]; // Descrizione della stanza
     char azione[50];       // Azione che viene aggiunta nel menù
-    void *funzione;        // funzione da utilizzare
+    void (*funzione)(Giocatore*);        // funzione da utilizzare
     Collegamento stanze_collegate; // stanze collegate a questa
 } Stanza;
+
 
 //create qua le vostre funzioni
 
@@ -122,62 +144,6 @@ int main(){
     return 0;
 }
 ```
-
-### Esempio di come creare una stanza:
-
-
-```c
-#include <stdio.h>
-#include <time.h>
-#include <stdlib.h>
-
-typedef struct {
-    int ID_destra;   // Stanza che si trova a destra
-    int ID_sinistra; // Stanza che si trova a sinistra
-    int ID_sopra;    // Stanza che si trova a sopra (avanti)
-    int ID_sotto;    // Stanza che si trova a sotto (indietro)
-} Collegamento;
-
-typedef struct {
-    int ID;                // ID della stanza
-    char nome[50];         // Nome della tua stanza
-    char descrizione[150]; // Descrizione della stanza
-    char azione[50];       // Azione che viene aggiunta nel menù
-    void *funzione;        // funzione da utilizzare
-    Collegamento stanze_collegate; // stanze collegate a questa
-} Stanza;
-
-void lancioMonetina(Giocatore *g) {
-    srand(time(NULL));                  //inizializza il generatore di numeri casuali
-    printf("Lancio la monetina:...");   //stampo il testo
-    if (rand() % 2 == 0) {              //genero un numero casuale e controllo se è pari
-        printf("è uscita testa\n");
-    } else {                            //se è dispari
-        printf("è uscita croce\n");
-    }
-}
-
-int main() {
-    Collegamento prossime_stanze = {-1, -1, -1, -1};//non ha nessuna stanza collegata
-    Stanza inizio = {0, "Ingresso", "Questa stanza è vuota, prosegui", "Lancia monetina", &lancioMonetina, prossime_stanze};
-
-    return 0;
-}
-
-```
-
-In questo esempio:
-
-
-- Per creare le stanze si utilizza la struct `Stanza`, fornendo il nome e una descrizione per ogni stanza creata, un testo che corrisponde all'azione che si può eseguire in questa stanza, il puntatore alla funzione che esegue l'azione e i collegamenti con le altre stanze, in questo caso:
-  -  L'ID della stanza è **0**
-  -  Il nome è **"Ingresso"**
-  -  La descrizione è **"Questa stanza è vuota, prosegui"**
-  -  L'azione che si può scegliere è **"Lancia monetina"** e quando viene scelta viene eseguita la funzione **lancioMonetina**
-  -  Non ha stanze collegate perchè tutti gli ID nella struct `Collegamento` sono **-1**
-- La funzione `lancioMonetina` è la funzione che viene eseguita quando il giocatore sceglie l'azione.
-- Si possono scrivere più funzioni per gestire ulteriori aspetti della stanza, come la gestione degli oggetti o dei collegamenti.
-
 
 ### Il giocatore
 
@@ -190,5 +156,53 @@ typedef struct {
 } Giocatore;
 ```
 
+Ha due parametri:
+- ***vita***: rappresenta il parametro della vita, nella vostra stanza potete dare un bonus di vita oppure ridurre la vita del giocatore
+- ***ID_stanza***: rappresenta la stanza in cui si trova il giocatore
+
 ### Funzione della stanza
 
+La funzione della stanza che definite deve avere come tipo di ritorno **void** e come unico parametro un puntatore ad una struct `Giocatore`. In questo modo potete modificare o usare la vita del giocatore così:
+
+```c
+void funzioneEsempio(Giocatore *giocatore){
+    //Diminuisco la vita di 1
+    giocatore->vita = giocatore->vita -1; 
+    //Stampo la vita del giocatore
+    printf("La vita del giocatore ora è %d",giocatore->vita);
+}
+```
+
+Se voglio creare una stanza che utilizzi questa funzione:
+
+```c
+Collegamento coll = ... ;
+
+Stanza esempio = {12, "Stanza esempio", "Questa stanza ha un tavolo con una pozione? Cosa fai?","Bevi pozione", &funzioneEsempio, coll}
+```
+
+
+
+### Esempio di come funziona il gioco:
+
+[GUARDA QUA L'ESEMPIO](test.c);
+
+In questo esempio:
+
+- Per creare le stanze si utilizza la struct `Stanza`, fornendo il nome e una descrizione per ogni stanza creata, un testo che corrisponde all'azione che si può eseguire in questa stanza, il puntatore alla funzione che esegue l'azione e i collegamenti con le altre stanze, in questo caso:
+  -  L'ID della stanza è **0**
+  -  Il nome è **"Ingresso"**
+  -  La descrizione è **"Questa stanza è vuota, prosegui"**
+  -  L'azione che si può scegliere è **"Lancia monetina"** e quando viene scelta viene eseguita la funzione **lancioMonetina**
+  -  Ha una sola stanza collegata perchè tutti gli altri ID nella struct `Collegamento` sono **-1**, è collegata a sinistra con la stanza **1**
+- La funzione `lancioMonetina` è la funzione che viene eseguita quando il giocatore sceglie l'azione.
+- Si possono scrivere più funzioni per gestire ulteriori aspetti della stanza, come la gestione degli oggetti o dei collegamenti (teletrasportare il giocatore in un'altra stanza), aumentare o diminuire la vita del giocatore.
+
+
+## Punti aggiuntivi del gruppo
+
+Se sistemate il codice del gioco per aggiungere queste funzionalità vi saranno assegnati punti bonus per il voto: ricordatevi che solo una persona nella classe può riscattare i punti per avere sistemato uno di questi punti. (Cioè se il punto 2 l'ha già risolto qualcuno allora i punti verranno dati solo alla prima persona che l'ha risolto).
+
+1. Modificare la funzione `sceltaAzione` e aggiungere anche l'opzione per stampare la descrizione della stanza in cui si trova il giocatore
+2. Modificare la funzione `cicloGioco` per fare vedere la vita del giocatore
+3. La funzione deve essere eseguita al massimo una volta, ora c'è un bug: se si va in una stanza e si torna indietro si può eseguire ancora la funzione (per provare basta fare andare l'[esempio](test.c) e vedere che se si esegue la funzione `Lancia monetina`, poi si va nella stanza a sinistra, si ritorna indietro andando a destra, si può ancora eseguire la funzione `Lancia monetina`)
