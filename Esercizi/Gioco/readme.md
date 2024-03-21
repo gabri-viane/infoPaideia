@@ -206,3 +206,4 @@ Se sistemate il codice del gioco per aggiungere queste funzionalità vi saranno 
 1. Modificare la funzione `sceltaAzione` e aggiungere anche l'opzione per stampare la descrizione della stanza in cui si trova il giocatore
 2. Modificare la funzione `cicloGioco` per fare vedere la vita del giocatore
 3. La funzione deve essere eseguita al massimo una volta, ora c'è un bug: se si va in una stanza e si torna indietro si può eseguire ancora la funzione (per provare basta fare andare l'[esempio](test.c) e vedere che se si esegue la funzione `Lancia monetina`, poi si va nella stanza a sinistra, si ritorna indietro andando a destra, si può ancora eseguire la funzione `Lancia monetina`)
+4. Modificare la funzione `cicloGioco` per fare in modo che il gioco finisca quando il giocatore muore
