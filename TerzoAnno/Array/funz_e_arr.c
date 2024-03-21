@@ -35,8 +35,9 @@ int main() {
 
     //////////////////////////
 
-    char str[60]="Ciao come stai?";
-    int contegg = conteggiaLettere(str,'a',15);
+    int contegg = conteggiaLettere("Ciao come stai?",'a',15);
     printf("Lettere trovate: %d",contegg);
+
+    return 0;
 
 }
