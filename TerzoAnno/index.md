@@ -4,6 +4,9 @@
 
 ## Terzo anno
 
+### Dispensa:
+[Trovate qua la dispensa](./dispensa/readme.md)
+
 Moduli:
 
 ### 1. Ripasso di C
