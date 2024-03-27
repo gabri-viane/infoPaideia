@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Dispensa C</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <ul>
+<li><a href="#dispensa-c">Dispensa C</a>
+<ul>
+<li><a href="#variabili">Variabili</a>
+<ul>
+<li><a href="#tipi-di-variabile">Tipi di variabile</a></li>
+<li><a href="#dichiarazione">Dichiarazione</a></li>
+</ul>
+</li>
+<li><a href="#input-e-output">Input e Output</a>
+<ul>
+<li><a href="#output">Output</a>
+<ul>
+<li><a href="#stampare-del-testo">Stampare del testo</a></li>
+<li><a href="#stampare-le-variabili">Stampare le variabili</a></li>
+<li><a href="#esempio-stampare-un-men%C3%B9">Esempio: Stampare un menù</a></li>
+</ul>
+</li>
+<li><a href="#input">Input</a>
+<ul>
+<li><a href="#salvare-i-valori">Salvare i valori</a></li>
+<li><a href="#esempio-come-costruire-un-men%C3%B9">Esempio: Come costruire un menù</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#strutture-di-controllo">Strutture di controllo</a>
+<ul>
+<li><a href="#if">If</a></li>
+<li><a href="#if-else">If Else</a></li>
+<li><a href="#else-if">Else-If</a></li>
+</ul>
+</li>
+<li><a href="#strutture-iterative-cicli">Strutture iterative (cicli)</a>
+<ul>
+<li><a href="#ciclo-for">Ciclo For</a></li>
+<li><a href="#ciclo-while">Ciclo While</a></li>
+</ul>
+</li>
+<li><a href="#funzioni">Funzioni</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="dispensa-c">Dispensa C</h1>
+<p>Qui trovate tutti gli argomenti trattati quest'anno.</p>
+<h2 id="variabili">Variabili</h2>
+<p>Sono dei contenitori che hanno un nome che decidiamo noi e permettono di salvare un valore.</p>
+<h4 id="tipi-di-variabile">Tipi di variabile</h4>
+<p>I tipi di variabile servono per dire al computer che cosa contiene una variabile, i tipi che esistono sono:</p>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Significato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>int</em></td>
+<td>Numero intero</td>
+</tr>
+<tr>
+<td><em>float</em></td>
+<td>Numero decimale</td>
+</tr>
+<tr>
+<td><em>double</em></td>
+<td>Numero decimale preciso</td>
+</tr>
+<tr>
+<td><em>char</em></td>
+<td>Carattere</td>
+</tr>
+<tr>
+<td><em>bool</em></td>
+<td>Valore logico (vero oppure falso)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="dichiarazione">Dichiarazione</h4>
+<p>Per utilizzare una variabile bisogna prima di tutto dichiararla, la dichiarazione segue queste regola:</p>
+<blockquote>
+<p>tipo nome;</p>
+</blockquote>
+<ol>
+<li><strong>tipo</strong> : i tipi sono elencati <a href="#tipi-di-variabile">qua sopra</a></li>
+<li><strong>nome</strong> : il nome della variabile deve essere
+<ul>
+<li><strong>UNICO</strong> : non ci devono essere altre variabili con lo stesso nome</li>
+<li><strong>SIGNIFICATIVO</strong> : il suo nome deve aiutare a capire cosa contiene</li>
+<li>Deve essere di sole lettere e numeri e _ (underscore), il nome di una  variabile non può mai iniziare con un numero</li>
+<li>Le lettere maiuscole sono diverse da quelle minuscole</li>
+</ul>
+</li>
+</ol>
+<h2 id="input-e-output">Input e Output</h2>
+<p>L'input serve per permettere all'utente di interagire con il nostro programma: gli permettiamo di inserire dei valori che poi salviamo in delle variabili e utilizziamo.</p>
+<p>L'output serve al nostro programma per &quot;comunicare&quot; con l'utente.</p>
+<h3 id="output">Output</h3>
+<p>L'output va fatto con la funzione <em>printf</em>, questa funzione permette di stampare SOLO DEL TESTO, per stampare il valore delle variabili bisogna seguire delle regole aggiuntive.</p>
+<h4 id="stampare-del-testo">Stampare del testo</h4>
+<p>Il testo deve essere sempre il primo parametro passato alla funzione:</p>
+<pre><code class="language-c"><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Stampo del testo&quot;</span>);
+</code></pre>
+<p>Per andare a capo bisogna inserire il carattere <strong>\n</strong>:</p>
+<pre><code class="language-c"><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Stampo del testo\n e vado a capo&quot;</span>);
+</code></pre>
+<h4 id="stampare-le-variabili">Stampare le variabili</h4>
+<p>Per stampare il valore di una variabile bisogna seguire delle regole come per andare a capo: bisogna inserire un simbolo nella stringa:</p>
+<p>I simboli sono in base al tipo di variabile che si vuole stampare:</p>
+<table>
+<thead>
+<tr>
+<th>Tipo Variabile</th>
+<th>Simbolo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int</td>
+<td>%d</td>
+</tr>
+<tr>
+<td>float</td>
+<td>%f</td>
+</tr>
+<tr>
+<td>double</td>
+<td>%lf</td>
+</tr>
+<tr>
+<td>char</td>
+<td>%c</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>%d</td>
+</tr>
+</tbody>
+</table>
+<p>Per stampare ad esempio una variabile intera:</p>
+<pre><code class="language-c"><span class="hljs-type">int</span> variabile = <span class="hljs-number">5</span>;
+<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;La variabile vale %d&quot;</span>,variabile);
+</code></pre>
+<p>Il simbolo inserito viene sostituito con il valore contenuto nella variabile, quindi in questo caso il simbolo <em><strong>%d</strong></em> viene sostituito dal valore contenuto nella variabile, l'output risulta:</p>
+<blockquote>
+<p>La variabile vale 5</p>
+</blockquote>
+<h4 id="esempio-stampare-un-menù">Esempio: Stampare un menù</h4>
+<p>Per stampare un menù con opzioni numerate basta seguire uno di questi due esempi:</p>
+<ol>
+<li>Con printf multipli:<pre><code class="language-c"><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Scegli un&#x27;opzione:\n&quot;</span>);
+<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot; 1) Opzione 1\n&quot;</span>);
+<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot; 2) Opzione 2\n&quot;</span>);
+<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot; 3) Opzione 3\n&quot;</span>);
+<span class="hljs-comment">//...</span>
+<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Inserisci il numero:&quot;</span>);
+</code></pre>
+</li>
+<li>Con una sola printf:<pre><code class="language-c"><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Scegli un&#x27;opzione:\n 1) Opzione 1\n 2) Opzione 2\n 3) Opzione 3\nInserisci il numero:&quot;</span>);
+</code></pre>
+</li>
+</ol>
+<h3 id="input">Input</h3>
+<p>L'input va fatto con la funzione <em>scanf</em>, questa funzione permette di leggere i valori INSERITI DALL'UTENTE e salvarli in una variabili del vostro codice.</p>
+<h4 id="salvare-i-valori">Salvare i valori</h4>
+<p>Per chiedere e salvare il valore in una variabile bisogna seguire delle regole:</p>
+<p>La scanf deve seguire queste regole:</p>
+<blockquote>
+<p>scanf(&quot;simbolo da usare&quot;, &amp;variabile);</p>
+</blockquote>
+<p>Dove:</p>
+<ul>
+<li>&quot;simbolo da usare&quot; dipende dalla lista qua sotto e deve essere messo tra virgolette</li>
+<li>Per dividere la stringa e la variabile si usa la virgola</li>
+<li>La variabile deve essere preceduta dalla &quot;E commerciale&quot;: &amp;</li>
+</ul>
+<p>Si usano i simboli e in base al tipo di variabile che si vuole leggere si sceglie da questa tabella:</p>
+<table>
+<thead>
+<tr>
+<th>Tipo Variabile</th>
+<th>Simbolo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int</td>
+<td>%d</td>
+</tr>
+<tr>
+<td>float</td>
+<td>%f</td>
+</tr>
+<tr>
+<td>double</td>
+<td>%lf</td>
+</tr>
+<tr>
+<td>char</td>
+<td>%c</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>%d</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Per leggere ad esempio una variabile intera:</li>
+</ol>
+<pre><code class="language-c"><span class="hljs-type">int</span> variabile;
+<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;variabile);
+</code></pre>
+<ol start="2">
+<li>Per leggere ad esempio una variabile double:</li>
+</ol>
+<pre><code class="language-c"><span class="hljs-type">double</span> var;
+<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lf&quot;</span>, &amp;var);
+</code></pre>
+<p>Il simbolo inserito viene dipende da che valore dobbiamo inserire nella variabile, quindi in questo caso il simbolo <em><strong>%d</strong></em> viene usato per una variabile <strong>int</strong> mentre <em><strong>%lf</strong></em> per una variabile <strong>double</strong> come scritto nella tabella.</p>
+<h4 id="esempio-come-costruire-un-menù">Esempio: Come costruire un menù</h4>
+<p>Per stampare un menù con opzioni numerate basta  fare uno dei due metodi come <a href="#esempio-stampare-un-men%C3%B9">descritti prima</a>:</p>
+<pre><code class="language-c"><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Scegli un&#x27;opzione:\n&quot;</span>);
+<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot; 1) Opzione 1\n&quot;</span>);
+<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot; 2) Opzione 2\n&quot;</span>);
+<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot; 3) Opzione 3\n&quot;</span>);
+<span class="hljs-comment">//...</span>
+<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Inserisci il numero:&quot;</span>);
+
+<span class="hljs-type">int</span> scelta;
+<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,scelta);
+</code></pre>
+<p>In questo modo l'opzione scelta (cioà il numero inserito dall'utente) viene salvato nella variabile <strong>scelta</strong>.</p>
+<h2 id="strutture-di-controllo">Strutture di controllo</h2>
+<h3 id="if">If</h3>
+<h3 id="if-else">If Else</h3>
+<h3 id="else-if">Else-If</h3>
+<h2 id="strutture-iterative-cicli">Strutture iterative (cicli)</h2>
+<h3 id="ciclo-for">Ciclo For</h3>
+<h3 id="ciclo-while">Ciclo While</h3>
+<h2 id="funzioni">Funzioni</h2>
+
+            
+            
+        </body>
+        </html>

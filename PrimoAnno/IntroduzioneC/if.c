@@ -4,6 +4,7 @@ int main() {
     double numero1;
     double numero2;
     int opzione;
+    
 
     printf("Inserisci il primo numero:");
     scanf("%lf", &numero1);
