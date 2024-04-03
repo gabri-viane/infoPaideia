@@ -2,17 +2,17 @@
 
 ### Indice:
 
-- [Labirinto tra le stanze](#labirinto-tra-le-stanze)
-    - [Indice:](#indice)
-    - [Spiegazione del gioco:](#spiegazione-del-gioco)
-    - [Come funziona:](#come-funziona)
-    - [Cosa dovete fare?](#cosa-dovete-fare)
-      - [Esempio uso strutture:](#esempio-uso-strutture)
-    - [Programma di base](#programma-di-base)
-    - [Il giocatore](#il-giocatore)
-    - [Funzione della stanza](#funzione-della-stanza)
-    - [Esempio di come funziona il gioco:](#esempio-di-come-funziona-il-gioco)
-  - [Punti aggiuntivi del gruppo](#punti-aggiuntivi-del-gruppo)
+1. [Labirinto tra le stanze](#labirinto-tra-le-stanze)
+      1. [Indice:](#indice)
+      2. [Spiegazione del gioco:](#spiegazione-del-gioco)
+      3. [Come funziona:](#come-funziona)
+      4. [Cosa dovete fare?](#cosa-dovete-fare)
+         1. [Esempio uso strutture:](#esempio-uso-strutture)
+      5. [Programma di base](#programma-di-base)
+      6. [Il giocatore](#il-giocatore)
+      7. [Funzione della stanza](#funzione-della-stanza)
+      8. [Esempio di come funziona il gioco:](#esempio-di-come-funziona-il-gioco)
+   1. [Punti aggiuntivi del gruppo](#punti-aggiuntivi-del-gruppo)
 
 
 Creiamo un gioco di avventura testuale: è un tipo di gioco in cui i giocatori interagiscono con il mondo di gioco attraverso il testo, prendendo decisioni e risolvendo enigmi.
@@ -61,26 +61,39 @@ Una struct collegamento è composta da 4 campi:
 **Se l'ID della stanza è `-1` allora non è collegata a nessuna stanza.**
 
 ```
-                    +---------+
-                    |         |
-                    |  sopra  |
-                    |         |
-                    +---------+
-                        ||
-    +---------+     +---------+     +---------+
-    |         |     |         |     |         |
-    | sinistra| === |   qui   | === |  destra |
-    |         |     |         |     |         |  
-    +---------+     +---------+     +---------+
-                        ||
-                    +---------+
-                    |         |
-                    |  sotto  |
-                    |         |
-                    +---------+
+                     +---------+
+                     |         |
+                     |  sopra  |
+                     |         |
+                     +---------+
+                         ||
+    +----------+     +---------+     +----------+
+    |          |     |         |     |          |
+    | sinistra | === |   qui   | === |  destra  |
+    |          |     |         |     |          |  
+    +----------+     +---------+     +----------+
+                         ||
+                     +---------+
+                     |         |
+                     |  sotto  |
+                     |         |
+                     +---------+
 ```
 
 #### Esempio uso strutture:
+```c
+Collegamento prossime_stanze;
+prossime_stanze.ID_destra = -1;
+prossime_stanze.ID_sinistra = -1;
+prossime_stanze.ID_sopra = -1;
+prossime_stanze.ID_sotto = -1;
+
+
+Stanza inizio = {0, "Ingresso", "Questa stanza è vuota, prosegui", "Lancia monetina", &lancioMonetina, prossime_stanze};
+```
+
+Oppure in un modo abbreviato:
+
 ```c
 Collegamento prossime_stanze = {-1, -1, -1, -1};
 
@@ -93,7 +106,7 @@ Stanza inizio = {0, "Ingresso", "Questa stanza è vuota, prosegui", "Lancia mone
 
 3. **Completa la stanza**: aggiungi nella struct della stanza il puntatore della tua funzione che gestisce la stanza.
 
-3. **Integra le stanze del gruppo**: nel vostro gruppo collegate le stanze tra di loro, quindi decidete i collegamenti tra le vostre stanze e create per ogni stanza i collegamenti.
+4. **Integra le stanze del gruppo**: nel vostro gruppo collegate le stanze tra di loro, quindi decidete i collegamenti tra le vostre stanze e create per ogni stanza i collegamenti.
     
     Ad esempio:
     > La stanza 1 è collegata a sinistra con la stanza 2 e a destra con la stanza 4
@@ -207,3 +220,5 @@ Se sistemate il codice del gioco per aggiungere queste funzionalità vi saranno 
 2. Modificare la funzione `cicloGioco` per fare vedere la vita del giocatore
 3. La funzione deve essere eseguita al massimo una volta, ora c'è un bug: se si va in una stanza e si torna indietro si può eseguire ancora la funzione (per provare basta fare andare l'[esempio](test.c) e vedere che se si esegue la funzione `Lancia monetina`, poi si va nella stanza a sinistra, si ritorna indietro andando a destra, si può ancora eseguire la funzione `Lancia monetina`)
 4. Modificare la funzione `cicloGioco` per fare in modo che il gioco finisca quando il giocatore muore
+
+
