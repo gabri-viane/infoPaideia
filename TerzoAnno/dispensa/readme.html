@@ -138,49 +138,68 @@
         
         </head>
         <body class="vscode-body vscode-light">
-            <ul>
+            <ol>
 <li><a href="#dispensa-c">Dispensa C</a>
-<ul>
+<ol>
 <li><a href="#variabili">Variabili</a>
-<ul>
+<ol>
 <li><a href="#tipi-di-variabile">Tipi di variabile</a></li>
 <li><a href="#dichiarazione">Dichiarazione</a></li>
-</ul>
+</ol>
 </li>
 <li><a href="#input-e-output">Input e Output</a>
-<ul>
+<ol>
 <li><a href="#output">Output</a>
-<ul>
+<ol>
 <li><a href="#stampare-del-testo">Stampare del testo</a></li>
 <li><a href="#stampare-le-variabili">Stampare le variabili</a></li>
 <li><a href="#esempio-stampare-un-men%C3%B9">Esempio: Stampare un menù</a></li>
-</ul>
+</ol>
 </li>
 <li><a href="#input">Input</a>
-<ul>
+<ol>
 <li><a href="#salvare-i-valori">Salvare i valori</a></li>
 <li><a href="#esempio-come-costruire-un-men%C3%B9">Esempio: Come costruire un menù</a></li>
-</ul>
+</ol>
 </li>
-</ul>
+</ol>
 </li>
-<li><a href="#strutture-di-controllo">Strutture di controllo</a>
-<ul>
-<li><a href="#if">If</a></li>
-<li><a href="#if-else">If Else</a></li>
-<li><a href="#else-if">Else-If</a></li>
-</ul>
+<li><a href="#istruzioni-di-controllo">Istruzioni di controllo</a>
+<ol>
+<li><a href="#istruzioni-di-selezione">Istruzioni di selezione</a>
+<ol>
+<li><a href="#if"><strong>if</strong></a></li>
+<li><a href="#else-if"><strong>else if</strong></a></li>
+<li><a href="#else"><strong>else</strong></a></li>
+</ol>
 </li>
-<li><a href="#strutture-iterative-cicli">Strutture iterative (cicli)</a>
-<ul>
-<li><a href="#ciclo-for">Ciclo For</a></li>
-<li><a href="#ciclo-while">Ciclo While</a></li>
-</ul>
+<li><a href="#istruzioni-di-iterazione">Istruzioni di iterazione</a>
+<ol>
+<li><a href="#for"><strong>for</strong></a></li>
+<li><a href="#while"><strong>while</strong></a></li>
+</ol>
 </li>
-<li><a href="#funzioni">Funzioni</a></li>
-</ul>
+<li><a href="#istruzioni-di-salto">Istruzioni di salto</a></li>
+</ol>
 </li>
-</ul>
+<li><a href="#lifetime-di-una-variabile">Lifetime di una variabile</a></li>
+<li><a href="#array">Array</a>
+<ol>
+<li><a href="#definizione-e-inizializzazione-di-array">Definizione e inizializzazione di array</a></li>
+<li><a href="#accesso-agli-elementi-di-un-array">Accesso agli elementi di un array</a></li>
+<li><a href="#operazioni-sugli-array">Operazioni sugli array</a></li>
+<li><a href="#considerazioni-sugli-array">Considerazioni sugli array</a></li>
+</ol>
+</li>
+<li><a href="#funzioni">Funzioni</a>
+<ol>
+<li><a href="#definizione-e-chiamata-di-funzioni">Definizione e chiamata di funzioni</a></li>
+<li><a href="#passaggio-di-parametri">Passaggio di parametri</a></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
 <h1 id="dispensa-c">Dispensa C</h1>
 <p>Qui trovate tutti gli argomenti trattati quest'anno.</p>
 <h2 id="variabili">Variabili</h2>
@@ -219,9 +238,8 @@
 </table>
 <h4 id="dichiarazione">Dichiarazione</h4>
 <p>Per utilizzare una variabile bisogna prima di tutto dichiararla, la dichiarazione segue queste regola:</p>
-<blockquote>
-<p>tipo nome;</p>
-</blockquote>
+<pre><code>  tipo nome;
+</code></pre>
 <ol>
 <li><strong>tipo</strong> : i tipi sono elencati <a href="#tipi-di-variabile">qua sopra</a></li>
 <li><strong>nome</strong> : il nome della variabile deve essere
@@ -283,9 +301,8 @@
 <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;La variabile vale %d&quot;</span>,variabile);
 </code></pre>
 <p>Il simbolo inserito viene sostituito con il valore contenuto nella variabile, quindi in questo caso il simbolo <em><strong>%d</strong></em> viene sostituito dal valore contenuto nella variabile, l'output risulta:</p>
-<blockquote>
-<p>La variabile vale 5</p>
-</blockquote>
+<pre><code>  La variabile vale 5
+</code></pre>
 <h4 id="esempio-stampare-un-menù">Esempio: Stampare un menù</h4>
 <p>Per stampare un menù con opzioni numerate basta seguire uno di questi due esempi:</p>
 <ol>
@@ -306,9 +323,8 @@
 <h4 id="salvare-i-valori">Salvare i valori</h4>
 <p>Per chiedere e salvare il valore in una variabile bisogna seguire delle regole:</p>
 <p>La scanf deve seguire queste regole:</p>
-<blockquote>
-<p>scanf(&quot;simbolo da usare&quot;, &amp;variabile);</p>
-</blockquote>
+<pre><code>  scanf(&quot;simbolo da usare&quot;, &amp;variabile);
+</code></pre>
 <p>Dove:</p>
 <ul>
 <li>&quot;simbolo da usare&quot; dipende dalla lista qua sotto e deve essere messo tra virgolette</li>
@@ -359,6 +375,16 @@
 <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lf&quot;</span>, &amp;var);
 </code></pre>
 <p>Il simbolo inserito dipende da che valore dobbiamo inserire nella variabile, quindi in questo caso il simbolo <em><strong>%d</strong></em> viene usato per una variabile <strong>int</strong> mentre <em><strong>%lf</strong></em> per una variabile <strong>double</strong> come scritto nella tabella.</p>
+<ol start="3">
+<li>
+<p>Per salvare ad esempio un valore in un array</p>
+<pre><code class="language-c"><span class="hljs-type">double</span> lista[<span class="hljs-number">10</span>];
+lista[<span class="hljs-number">5</span>]=<span class="hljs-number">30.23</span>;
+<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%lf&quot;</span>,lista[<span class="hljs-number">5</span>]);
+</code></pre>
+<p>Stampa il valore <strong>double</strong> che si trova alla posizione <strong>5</strong> dentro l'array <em><strong>lista</strong></em>.</p>
+</li>
+</ol>
 <h4 id="esempio-come-costruire-un-menù">Esempio: Come costruire un menù</h4>
 <p>Per stampare un menù con opzioni numerate basta  fare uno dei due metodi come <a href="#esempio-stampare-un-men%C3%B9">descritti prima</a>:</p>
 <pre><code class="language-c"><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Scegli un&#x27;opzione:\n&quot;</span>);
@@ -372,14 +398,178 @@
 <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,scelta);
 </code></pre>
 <p>In questo modo l'opzione scelta (cioà il numero inserito dall'utente) viene salvato nella variabile <strong>scelta</strong>.</p>
-<h2 id="strutture-di-controllo">Strutture di controllo</h2>
-<h3 id="if">If</h3>
-<h3 id="if-else">If Else</h3>
-<h3 id="else-if">Else-If</h3>
-<h2 id="strutture-iterative-cicli">Strutture iterative (cicli)</h2>
-<h3 id="ciclo-for">Ciclo For</h3>
-<h3 id="ciclo-while">Ciclo While</h3>
+<h2 id="istruzioni-di-controllo">Istruzioni di controllo</h2>
+<p>Le istruzioni di controllo in C consentono di influenzare il flusso di esecuzione di un programma. Queste istruzioni permettono di prendere decisioni, eseguire azioni ripetitive e gestire il flusso di esecuzione del programma in base alle condizioni specificate.</p>
+<p>Ci sono tre tipi principali di istruzioni di controllo in C: selezione, iterazione e salto.</p>
+<h3 id="istruzioni-di-selezione">Istruzioni di selezione</h3>
+<p>Le istruzioni di selezione consentono di eseguire parti del codice solo se una determinata condizione è vera. Le istruzioni di selezione più comuni in C sono l'istruzione <code>if</code>, l'istruzione <code>else if</code> e l'istruzione <code>else</code>.</p>
+<h4 id="if"><strong>if</strong></h4>
+<p>L'istruzione <code>if</code> permette di eseguire un blocco di codice solo se una condizione specificata è vera. La sintassi è:</p>
+<pre><code class="language-c"><span class="hljs-keyword">if</span> (condizione) {
+    <span class="hljs-comment">// Blocco di codice eseguito se la condizione è vera</span>
+}
+</code></pre>
+<h4 id="else-if"><strong>else if</strong></h4>
+<p>L'istruzione <code>else if</code> permette di specificare ulteriori condizioni da controllare nel caso in cui la prima condizione non sia vera. Può essere utilizzata dopo un'istruzione <code>if</code> o dopo un'altra istruzione <code>else if</code>. La sintassi è:</p>
+<pre><code class="language-c"><span class="hljs-keyword">if</span> (condizione1) {
+    <span class="hljs-comment">// Blocco di codice eseguito se la condizione1 è vera</span>
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (condizione2) {
+    <span class="hljs-comment">// Blocco di codice eseguito se la condizione2 è vera (e la condizione1 è falsa)</span>
+}
+</code></pre>
+<h4 id="else"><strong>else</strong></h4>
+<p>L'istruzione <code>else</code> permette di eseguire un blocco di codice se nessuna delle condizioni precedenti è vera. È sempre usata dopo un'istruzione <code>if</code> o <code>else if</code>. La sintassi è:</p>
+<pre><code class="language-c"><span class="hljs-keyword">if</span> (condizione) {
+    <span class="hljs-comment">// Blocco di codice eseguito se la condizione è vera</span>
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-comment">// Blocco di codice eseguito se nessuna delle condizioni precedenti è vera</span>
+}
+</code></pre>
+<p>L'istruzione <code>else</code>, se usata, deve essere per forza l'ultima nell'elenco di <code>if/else if</code>.</p>
+<h3 id="istruzioni-di-iterazione">Istruzioni di iterazione</h3>
+<p>Le istruzioni di iterazione (o cicli) consentono di eseguire ripetutamente un blocco di codice fino a quando una determinata condizione è vera o falsa. Le istruzioni di iterazione più comuni in C sono l'istruzione <code>for</code>, l'istruzione <code>while</code> e l'istruzione <code>do-while</code>.</p>
+<h4 id="for"><strong>for</strong></h4>
+<p>L'istruzione <code>for</code> permette di eseguire un blocco di codice per un numero definito di volte. La sintassi è:</p>
+<pre><code class="language-c"><span class="hljs-keyword">for</span> (inizializzazione; condizione; aggiornamento) {
+    <span class="hljs-comment">// Blocco di codice eseguito fino a quando la condizione è vera</span>
+}
+</code></pre>
+<h4 id="while"><strong>while</strong></h4>
+<p>L'istruzione <code>while</code> permette di eseguire un blocco di codice finché una condizione specificata è vera. La sintassi è:</p>
+<pre><code class="language-c"><span class="hljs-keyword">while</span> (condizione) {
+    <span class="hljs-comment">// Blocco di codice eseguito finché la condizione è vera</span>
+}
+</code></pre>
+<h3 id="istruzioni-di-salto">Istruzioni di salto</h3>
+<p>Le istruzioni di salto consentono di cambiare il flusso di esecuzione del programma in modo non sequenziale. Le istruzioni di salto più comuni in C sono <code>break</code>, <code>continue</code>, <code>return</code>.</p>
+<ul>
+<li>
+<p><strong>break</strong>: L'istruzione <code>break</code> viene utilizzata per interrompere l'esecuzione di un ciclo o di uno switch-case. Quando viene incontrata, il controllo viene passato all'istruzione successiva al ciclo o allo switch-case. È spesso utilizzata per uscire da un ciclo in modo prematuro.</p>
+</li>
+<li>
+<p><strong>continue</strong>: L'istruzione <code>continue</code> viene utilizzata all'interno di un ciclo per interrompere l'iterazione corrente e passare all'iterazione successiva del ciclo. In altre parole, salta il resto del corpo del ciclo e passa all'iterazione successiva.</p>
+</li>
+<li>
+<p><strong>return</strong>: L'istruzione <code>return</code> viene utilizzata all'interno di una funzione per restituire un valore al chiamante della funzione. Quando viene incontrata, la funzione termina immediatamente e il controllo viene restituito al punto di chiamata della funzione.</p>
+</li>
+</ul>
+<h2 id="lifetime-di-una-variabile">Lifetime di una variabile</h2>
+<p>Per lifetime si intende la vita di una variabile: cioè dove &quot;nasce&quot; e dove &quot;muore&quot;:</p>
+<ul>
+<li>nasce quando viene dichiarata</li>
+<li>muore alla chiusura delle parentesi graffe entro la quale è stata dichiara</li>
+</ul>
+<p>Ad esempio:</p>
+<pre><code class="language-c"><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span>{
+
+   <span class="hljs-type">int</span> var1 = <span class="hljs-number">50</span>; <span class="hljs-comment">//var1 nasce qua</span>
+
+   <span class="hljs-keyword">if</span>(var1&gt;<span class="hljs-number">25</span>){
+      <span class="hljs-type">int</span> var2= <span class="hljs-number">80</span>; <span class="hljs-comment">//var2 nasce qua</span>
+      <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Var2 vale : %d&quot;</span>,var2);
+   } <span class="hljs-comment">//var2 muore qua</span>
+
+   <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+} <span class="hljs-comment">//var 1 muore qua</span>
+</code></pre>
+<p>Questo perché <strong>var1</strong> è stata dichiarata dentro le graffe del main e quindi muore alla chiusura delle graffe del main. Mentre <strong>var2</strong> è stata dichiarata nelle graffe dell'<em>if</em> e quindi muore alla chiusura delle graffe dell'<em>if</em> stesso.</p>
+<h2 id="array">Array</h2>
+<p>Un array è una tipologia di variabile che può contenere un insieme di elementi dello stesso tipo. Gli array forniscono un metodo conveniente per memorizzare e accedere a più valori utilizzando un singolo nome di variabile.</p>
+<h3 id="definizione-e-inizializzazione-di-array">Definizione e inizializzazione di array</h3>
+<p>Per definire un array in C, si specifica il tipo di dati degli elementi dell'array seguito da un nome per l'array e una dimensione tra parentesi quadre []. Ad esempio:</p>
+<pre><code>  tipo nome[dimensione]
+</code></pre>
+<pre><code class="language-c"><span class="hljs-type">int</span> numeri[<span class="hljs-number">5</span>];
+</code></pre>
+<p>Questa istruzione definisce un array chiamato &quot;numeri&quot; che può contenere 5 elementi di tipo int.</p>
+<p>Gli array possono anche essere inizializzati durante la dichiarazione:</p>
+<pre><code class="language-c"><span class="hljs-type">int</span> numeri[<span class="hljs-number">5</span>] = {<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>};
+</code></pre>
+<p>In questo caso, l'array &quot;numeri&quot; viene dichiarato e inizializzato con i valori specificati.</p>
+<h3 id="accesso-agli-elementi-di-un-array">Accesso agli elementi di un array</h3>
+<p>Gli elementi di un array hanno un indice che parte da <code>0</code> a <code>dimensione-1</code>, dove la dimensione è il numero totale di elementi nell'array. Per accedere a un elemento specifico dell'array, si utilizza la sua posizione nell'array, chiamata indice.</p>
+<p>La sintassi è:</p>
+<pre><code>  nome[posizione]
+</code></pre>
+<p>Ad esempio:</p>
+<pre><code class="language-c"><span class="hljs-type">int</span> primo_numero = numeri[<span class="hljs-number">0</span>];  <span class="hljs-comment">// Accesso al primo elemento</span>
+<span class="hljs-type">int</span> secondo_numero = numeri[<span class="hljs-number">1</span>];  <span class="hljs-comment">// Accesso al secondo elemento</span>
+</code></pre>
+<p>L'elemento dell'array può anche essere modificato utilizzando lo stesso operatore di accesso:</p>
+<pre><code class="language-c">numeri[<span class="hljs-number">2</span>] = <span class="hljs-number">10</span>;  <span class="hljs-comment">// Modifica il terzo elemento dell&#x27;array</span>
+</code></pre>
+<h3 id="operazioni-sugli-array">Operazioni sugli array</h3>
+<p>Gli array consentono di eseguire una serie di operazioni utili:</p>
+<ul>
+<li><strong>Iterazione</strong>: Si può iterare su tutti gli elementi di un array utilizzando cicli come for o while.</li>
+</ul>
+<pre><code class="language-c"><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) {
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d &quot;</span>, numeri[i]);
+}
+</code></pre>
+<ul>
+<li><strong>Stringhe</strong>: In C, le stringhe sono array di caratteri terminati da un carattere nullo ('\0'). Possono essere manipolate come array di caratteri.</li>
+</ul>
+<pre><code class="language-c"><span class="hljs-type">char</span> nome[] = <span class="hljs-string">&quot;Mario&quot;</span>;
+<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Il primo carattere del nome è: %c\n&quot;</span>, nome[<span class="hljs-number">0</span>]);  <span class="hljs-comment">// Stampa &#x27;M&#x27;</span>
+</code></pre>
+<h3 id="considerazioni-sugli-array">Considerazioni sugli array</h3>
+<ul>
+<li>
+<p><strong>Indici fuori limite</strong>: Accedere a un elemento di un array con un indice al di fuori del suo intervallo può causare  errori nel programma.</p>
+</li>
+<li>
+<p><strong>Dimensioni statiche</strong>: Gli array in C hanno dimensioni statiche, non può essere modificata durante l'esecuzione del programma.
+Le funzioni sono blocchi di codice riutilizzabili che eseguono un'operazione specifica. Nella programmazione strutturata, le funzioni svolgono un ruolo fondamentale nell'organizzazione del codice, consentendo di suddividere un programma complesso in blocchi più piccoli e gestibili.</p>
+</li>
+</ul>
 <h2 id="funzioni">Funzioni</h2>
+<h3 id="definizione-e-chiamata-di-funzioni">Definizione e chiamata di funzioni</h3>
+<p>Una funzione è definita utilizzando la seguente sintassi:</p>
+<pre><code class="language-c">tipo_di_ritorno <span class="hljs-title function_">nome_funzione</span><span class="hljs-params">(parametri)</span> {
+    <span class="hljs-comment">// Corpo della funzione</span>
+    <span class="hljs-comment">// Dichiarazioni e istruzioni</span>
+    <span class="hljs-keyword">return</span> valore_di_ritorno;
+}
+</code></pre>
+<ul>
+<li>
+<p><strong>tipo_di_ritorno</strong>: Indica il tipo di dato che la funzione restituirà al termine della sua esecuzione. Può essere un tipo di dato primitivo come int, float, char, o un tipo di dato personalizzato.</p>
+</li>
+<li>
+<p><strong>nome_funzione</strong>: È il nome della funzione che stai definendo. Questo nome sarà utilizzato per chiamare la funzione da altre parti del programma.</p>
+</li>
+<li>
+<p><strong>parametri</strong>: Sono le variabili che la funzione accetta come input. Possono essere zero o più parametri, separati da virgole, o eventualmente essere omessi se la funzione non richiede alcun input.</p>
+</li>
+<li>
+<p><strong>Corpo della funzione</strong>: È il blocco di codice all'interno delle parentesi graffe che contiene le dichiarazioni di variabili e le istruzioni che definiscono il comportamento della funzione.</p>
+</li>
+<li>
+<p><strong>return</strong>: Utilizzato per restituire un valore al termine dell'esecuzione della funzione. Il tipo di valore restituito deve corrispondere al tipo di ritorno dichiarato.</p>
+</li>
+</ul>
+<p>Una volta definita, la funzione può essere chiamata da altre parti del programma. La chiamata di una funzione avviene utilizzando il suo nome seguito da parentesi tonde, eventualmente con gli argomenti richiesti all'interno delle parentesi.</p>
+<p>Ad esempio, supponiamo di definire una funzione per calcolare la somma di due numeri interi:</p>
+<pre><code class="language-c"><span class="hljs-type">int</span> <span class="hljs-title function_">somma</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span> {
+    <span class="hljs-type">int</span> risultato = a + b;
+    <span class="hljs-keyword">return</span> risultato;
+}
+</code></pre>
+<p>Per chiamare questa funzione e ottenere il risultato, puoi fare qualcosa del genere:</p>
+<pre><code class="language-c"><span class="hljs-type">int</span> risultato_somma = somma(<span class="hljs-number">5</span>, <span class="hljs-number">3</span>);
+<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;La somma è: %d\n&quot;</span>, risultato_somma);
+</code></pre>
+<h3 id="passaggio-di-parametri">Passaggio di parametri</h3>
+<p>I parametri possono essere passati a una funzione in due modi principali: per valore e per riferimento.</p>
+<ul>
+<li>
+<p><strong>Passaggio per valore</strong>: I parametri sono passati per valore quando il valore effettivo dei parametri viene copiato nei parametri della funzione. Le modifiche apportate ai parametri all'interno della funzione non influiscono sui parametri originali. Questo è il metodo di passaggio di default in C.</p>
+</li>
+<li>
+<p><strong>Passaggio per riferimento</strong>: I parametri sono passati per riferimento quando si passa <strong>l'indirizzo di memoria</strong> dei parametri alla funzione. In questo modo, le modifiche apportate ai parametri all'interno della funzione influiscono direttamente sui parametri originali.</p>
+</li>
+</ul>
 
             
             
