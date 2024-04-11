@@ -1,3 +1,7 @@
+# Importante:
+- Riassunto teoria [leggi qui](/TerzoAnno/dispensa/readme.md);
+- Teoria completa [leggi qui](/teoria.md);
+
 # Teoria
    1. [Primo anno](/PrimoAnno/index.md)
    2. [Secondo anno](/SecondoAnno/readme.md)
