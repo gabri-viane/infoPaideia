@@ -1,3 +1,5 @@
+# [Simulazione qua](./TerzoAnno/simulazione.md)
+
 # Importante:
 - Riassunto teoria [leggi qui](/TerzoAnno/dispensa/readme.md);
 - Teoria completa [leggi qui](/teoria.md);
