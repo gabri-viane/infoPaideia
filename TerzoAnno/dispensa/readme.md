@@ -336,6 +336,18 @@ for (int i = 0; i < 5; i++) {
 }
 ```
 
+- **Inserimento**: Si può fare un'iterazione come spiegato prima e si usa la scanf esattamente come le variabili normali e semplicemente specificando l'indice a cui inserirlo:
+   1. Con iterazione:
+   ```c
+   for (int i = 0; i < 5; i++) {
+       scanf("%d", &numeri[i]);
+   }
+   ```
+   2. Senza iterazione:
+   ```c
+   scanf("%d", &numeri[2]); //inserisco il valore intero alla posizione 2 (attenzione a non andare oltre il limite della dimensione!)
+   ```
+      
 - **Stringhe**: In C, le stringhe sono array di caratteri terminati da un carattere nullo ('\0'). Possono essere manipolate come array di caratteri.
 
 ```c
