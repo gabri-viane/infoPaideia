@@ -399,3 +399,19 @@ I parametri possono essere passati a una funzione in due modi principali: per va
 - **Passaggio per valore**: I parametri sono passati per valore quando il valore effettivo dei parametri viene copiato nei parametri della funzione. Le modifiche apportate ai parametri all'interno della funzione non influiscono sui parametri originali. Questo è il metodo di passaggio di default in C.
 
 - **Passaggio per riferimento**: I parametri sono passati per riferimento quando si passa **l'indirizzo di memoria** dei parametri alla funzione. In questo modo, le modifiche apportate ai parametri all'interno della funzione influiscono direttamente sui parametri originali.
+
+### Usare gli Array con le Funzione:
+Per passare un array ad una funzione basta fare come con variabili normali, tranne che è comodo passare come parametro anche la dimensione dell'array. Ad esempio:
+Dichiaro una funzione che prende l'array di numeri double e la sua dimensione e controlla se contiene almeno un numero minore di 0: (restituisce un boolean: vero se ne ha trovato almeno uno e falso altrimenti)
+```c
+bool esempioConArray(double lista_numeri[], int dimensione) {
+   bool trovato_numero_minore_di_0 = false;
+   for(int i = 0; i < dimensione; i++){ // Faccio un ciclo partendo da 0 e arrivando alla dimensione (esclusa, ad esempio con un array di 20, vado da 0 a 19, cioè uso il < non <=)
+      if(lista_numeri[i] < 0){ //Controllo se il numero nella lista, all' indice "i" corrente, è minore di zero
+         trovato_numero_minore_di_0 = true;
+      }
+   }
+   return trovato_numero_minore_di_0; //Restituisco il risultato
+}
+```
+
